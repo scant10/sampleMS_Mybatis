@@ -1,0 +1,27 @@
+use mybatis;
+
+
+DROP TABLE IF EXISTS `TBL_USER`;
+
+
+CREATE TABLE TBL_USER (
+  id varchar(40) NOT NULL,
+  username varchar(45) NOT NULL,
+  password varchar(45) NOT NULL
+);
+
+
+DROP TABLE IF EXISTS `FREE_BOARD`;
+
+
+CREATE TABLE FREE_BOARD (
+  BOARD_ID varchar(20) NOT NULL,
+  UNAME varchar(20) NOT NULL,
+  TITLE varchar(20) NOT NULL,
+  CATEGORY varchar(6),
+  CONTENT TEXT,
+  VIEWCOUNT INT DEFAULT 0,
+  WDATE DATETIME,
+  PRIMARY KEY(BOARD_ID) 
+);
+

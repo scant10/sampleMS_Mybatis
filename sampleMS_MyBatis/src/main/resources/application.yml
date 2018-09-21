@@ -1,0 +1,53 @@
+server:
+  port: 9999
+
+spring:
+  profiles:
+  active:
+    - default
+  data:
+    rest:
+      base-path: /
+  datasource:
+    classname: org.mariadb.jdbc.MySQLDataSource
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mybatis
+    username: root
+    password: 1111
+    sql-script-encoding: UTF-8
+    platform: mysql
+    type: com.zaxxer.hikari.HikariDataSource 
+    hikari:
+      pool-name: tams-jpa-hikari-pool
+      maximum-pool-size: 10
+      connection-test-query: SELECT 1
+ 
+ # jpa:
+ #   database-platform: org.hibernate.dialect.MySQL5InnoDBDialect 
+ #   database: mysql
+ #   generate-ddl: true
+ #   open-in-view: true
+ #   show-sql: true
+ #   hibernate:
+ #     ddl-auto: create-drop
+ #     naming-strategy: org.hibernate.cfg.EJB3NamingStrategy
+ #   properties:
+ #     hibernate.cache.use_second_level_cache: true
+ #     hibernate.cache.use_query_cache: false
+ #     hibernate.generate_statistics: true
+ #     hibernate.cache.region.factory_class: org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory
+        
+      
+# datasource:
+#    url: jdbc:h2:mem:test
+#    driverClassName: org.h2.Driver
+#    username: sa
+#    password:
+    
+#  jpa:
+#    database-platform: org.hibernate.dialect.H2Dialect
+#    hibernate:
+#      ddl-auto: create-drop
+
+ 
+  
