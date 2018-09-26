@@ -15,5 +15,4 @@ public class FreeBoard{
     private String content;
     private int viewCount;
     private Date wdate;
-    
 }
